@@ -1,0 +1,132 @@
+.quicksearchthumbnail {
+    background-color: transparent;
+}
+.quicksearchthumbnail:hover {
+    background-color: white;
+}
+
+body{
+	background: url(http://localhost/example/image/m6.jpg) no-repeat center center fixed;
+	background-size:cover
+}
+p{
+  color:white;
+}
+
+h1{
+	color:white;
+}
+
+h2{
+	color:white;
+}
+
+h3{
+	color:white;
+}
+
+h4{
+	color:white;
+}
+label{
+  color:white;
+}
+
+.container{
+  position: fixed;
+  top: 60%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+#regT{
+   position: fixed;
+  top: 15%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+#fisongT{
+  position: fixed;
+  top: 20%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) ,li a:visited:not(.active){
+    background-color: #111;
+    text-decoration:none;
+    color :white;
+}
+
+
+a.active:hover {
+   
+    color:white;
+    text-decoration: none;
+    
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.btn-primary {
+    background: gray;    
+}
+
+.btn-primary:hover{
+  background: black;
+}
+
+ #table {
+    display: table;
+    }
+
+  #row  {
+    display: table-row;
+    }
+
+  #cell {
+    display: table-cell;
+    }
+
+
+th {
+  color:purple;
+}
+
+
+.font{
+  color:chartreuse;
+  font-weight: bold;
+}
+
+
+.lyric{
+  background-color: black;
+  font-weight: bold;
+}
+
