@@ -63,7 +63,7 @@ if($_SESSION['name']==null)
                     <a href="http://localhost/example/searchM.php" class="">
                        
                         <div class='quicksearchthumbnail thumbnail'>
-                            <img src='http://localhost/example/image/g6.gif' alt='#' class='img-rounded'  style="width:700px;height:400px">
+                            <img src='http://localhost/example/image/g6.gif' alt='#' class='img-rounded'  style="width:700px;height:350px">
                             
                         </div>
                     </a>
@@ -75,7 +75,7 @@ if($_SESSION['name']==null)
                     <a href="http://localhost/example/recom.php" class="">
                         
                         <div class='quicksearchthumbnail thumbnail'>
-                            <img src='http://localhost/example/image/g5.gif' alt='#' class='img-rounded'  style="width:700px;height:400px">
+                            <img src='http://localhost/example/image/g5.gif' alt='#' class='img-rounded'  style="width:700px;height:350px">
                            
                         </div>
                     </a>
