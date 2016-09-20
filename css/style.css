@@ -1,8 +1,10 @@
 .quicksearchthumbnail {
     background-color: transparent;
+    border: none;
 }
 .quicksearchthumbnail:hover {
     background-color: white;
+    border: none;
 }
 
 body{
@@ -26,6 +28,10 @@ h3{
 }
 
 h4{
+  color:white;
+}
+
+h5{
 	color:white;
 }
 label{

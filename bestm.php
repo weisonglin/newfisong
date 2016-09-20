@@ -8,7 +8,7 @@ $words=$_GET['words'];
 $search=$_GET['search'];
 
 $table=kmptable($words);
-//print_r($table);
+
 $connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
 mysql_select_db("fisonguser",$connection) or die("database error");
 // $query="SELECT * FROM songs";

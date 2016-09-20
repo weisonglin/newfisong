@@ -40,7 +40,10 @@ if($_SESSION['name']==null)
                 <div class="row">
                     <h1 class="text-center"> Welcome to fiSong </h1>
                     <h3 class="text-center"> Discover, Soul, Song</h3>
+                    <h4 class="text-center"> -- Intelligence Song Finder --</h4>
                 </div>
+                <br/>
+                <br/>
 
                 <div class="row">
 <!--                   <div class="col-md-4">
@@ -55,22 +58,24 @@ if($_SESSION['name']==null)
                   </div> -->
 
                   <div class="col-md-6">
-                     <h4 class='text-center'>Matching</h4>
+                     <h3 class='text-center'>Matching</h3>
+                     <br/>
                     <a href="http://localhost/example/searchM.php" class="">
                        
                         <div class='quicksearchthumbnail thumbnail'>
-                            <img src='http://localhost/example/image/m2.jpg' alt='#' class='img-rounded'  style="width:300px;height:300px">
+                            <img src='http://localhost/example/image/g6.gif' alt='#' class='img-rounded'  style="width:700px;height:400px">
                             
                         </div>
                     </a>
                   </div>
 
                   <div class="col-md-6">
-                     <h4 class='text-center'>Recommandation</h4>
+                     <h3 class='text-center'>Recommandation</h3>
+                     <br/>
                     <a href="http://localhost/example/recom.php" class="">
                         
                         <div class='quicksearchthumbnail thumbnail'>
-                            <img src='http://localhost/example/image/m3.jpg' alt='#' class='img-rounded'  style="width:300px;height:300px">
+                            <img src='http://localhost/example/image/g5.gif' alt='#' class='img-rounded'  style="width:700px;height:400px">
                            
                         </div>
                     </a>
