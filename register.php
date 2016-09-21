@@ -8,7 +8,8 @@ $error_message='';
 if($_POST['regi']){
 	if($_POST['name'] && $_POST['password']&& $_POST['confirmpassword'])
 	{
-		$connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+		// $connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+		$connection=mysql_connect("localhost","root","") or die("host connection error");
 		mysql_select_db("fisonguser",$connection) or die("database error");
 		$name=mysql_real_escape_string($_POST['name']);
 		$password = mysql_real_escape_string($_POST['password']);
@@ -80,7 +81,7 @@ if($_POST['regi']){
                 <h1  id="regT"> Registration</h1>
             </div>
 
-             <div class="container">
+             <div class="container fix">
              	 <?php
 		  	if($error_message!=''){
 		  		echo"<p class='error' align='center' style='color: red;'>{$error_message}</p>";}

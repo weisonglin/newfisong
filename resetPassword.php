@@ -15,7 +15,8 @@ $id=$_GET['i_id'];
 if($_POST['resetpassword']){
   if($_POST['password'])
   {
-    $connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+    // $connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+    $connection=mysql_connect("localhost","root","") or die("host connection error");
     mysql_select_db("fisonguser",$connection) or die("database error"); 
     $password = mysql_real_escape_string($_POST['password']);
     mysql_query("UPDATE `user` SET `password` = '$password' WHERE `id`= '$id' ");
@@ -59,7 +60,7 @@ if($_POST['resetpassword']){
                 <h1  id="regT"> Reset Password</h1>
             </div>            
 
-      <div class="container">
+      <div class="container fix">
 
       <form role="form" method="post"    enctype="multipart/form-data">
         <div class="form-group">

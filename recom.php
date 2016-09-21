@@ -9,7 +9,8 @@ $age=$_SESSION['age'];
 $country=$_SESSION['country'];
 $job=$_SESSION['job'];
 
-$connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+// $connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+$connection=mysql_connect("localhost","root","") or die("host connection error");
 mysql_select_db("fisonguser",$connection) or die("database error");
 //$score_id=mysql_query("SELECT `id` FROM songs");
 //$score_gender=mysql_query("SELECT ".$gender." FROM songs");
@@ -73,7 +74,7 @@ $result=array_keys($score);
                 </div>
 
 
-            <div class="container">
+            <div class="container fix">
                 
                 <table class="table table-hover">
                   <h2 >Recommandation</h2>
@@ -88,7 +89,7 @@ $result=array_keys($score);
                  
                   
                   $i=0;
-                  while($i<3)
+                  while($i<10)
                   {
                     $id=mysql_real_escape_string($result[$i]);
                     //echo $result[$i];

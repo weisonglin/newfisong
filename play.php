@@ -10,7 +10,8 @@ if($_SESSION['name']==null)
 
 $id=$_GET['id'];
 $_SESSION['todaysong']=$id;
-$connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+// $connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+$connection=mysql_connect("localhost","root","") or die("host connection error");
     mysql_select_db("fisonguser",$connection) or die("database error");
 
     $songinfo=mysql_fetch_array(mysql_query("SELECT * FROM `songs` WHERE `id`='$id'"));
@@ -59,7 +60,7 @@ body
             </div>
 
 
-   <div class='container'>
+   <div class='container fix'>
     
   <?php 
   echo "<audio controls>

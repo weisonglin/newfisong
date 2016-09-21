@@ -37,7 +37,8 @@ if($_SESSION['admin']!=1)
   </ul>
 <?php      
            // error_reporting(0);
-            $connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+            // $connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+            $connection=mysql_connect("localhost","root","") or die("host connection error");
             mysql_select_db("fisonguser",$connection) or die("database error");
             $query="SELECT * FROM songs";
             $songs_list=mysql_query($query);
@@ -48,39 +49,41 @@ if($_SESSION['admin']!=1)
             mysql_close();
 ?>
         <body>
-
+            <br/>
+            <br/>
             <div class="container">
                 <a href="addsong.php" class="btn btn-primary btn-lg active" role="button">Add a Song</a>
                 <a href="modifyUser.php" class="btn btn-primary btn-lg active" role="botton">Modify User</a>
-                <table class="table table-hover">
-                  <thead>
-                  <tr>
-                    <th><font class='font'>Songs</font></th>
-                    <th><font class='font'>Options</font></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php
 
-                  $i=0;
-                  while($i<$num)
-                  {
-                    //echo $num;
-                    $song_id=mysql_result($songs_list, $i,"id");
-                    $song_name=mysql_result($songs_list, $i,"title");
-                    $song_song=mysql_result($songs_list,$i, "song");
-                    echo "<tr>
-                    <td><font class='font'>$song_name</font></td>
-          
-                      
-                    <td><a href='option.php?i_id=$song_id&song=$song_song' >Delete</a></td>
-                    </tr>";
-                    $i++;
-                  }
-                  ?>
-                 </tbody>
-                </table>
+                  <table class="table table-hover table-scrollable">
+                    <thead>
+                    <tr>
+                      <th><font class='font'>Songs</font></th>
+                      <th><font class='font'>Options</font></th>
+                    </tr>
+                    </thead>
+                  <tbody>
+                    <?php
 
+                    $i=0;
+                    while($i<$num)
+                    {
+                      //echo $num;
+                      $song_id=mysql_result($songs_list, $i,"id");
+                      $song_name=mysql_result($songs_list, $i,"title");
+                      $song_song=mysql_result($songs_list,$i, "song");
+                      echo "<tr>
+                      <td><font class='font'>$song_name</font></td>
+            
+                        
+                      <td><a href='option.php?i_id=$song_id&song=$song_song' >Delete</a></td>
+                      </tr>";
+                      $i++;
+                    }
+                    ?>
+                   </tbody>
+                  </table>
+                </div>
 
             </div>
         </body>

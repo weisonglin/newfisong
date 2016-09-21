@@ -9,7 +9,8 @@ $search=$_GET['search'];
 
 $table=kmptable($words);
 
-$connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+// $connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+$connection=mysql_connect("localhost","root","") or die("host connection error");
 mysql_select_db("fisonguser",$connection) or die("database error");
 // $query="SELECT * FROM songs";
 $songs_list=mysql_query("SELECT `title`,`id`,`lyric` FROM songs");
@@ -91,7 +92,7 @@ $result=array_keys($score);
                 </div>
 
 
-            <div class="container">
+            <div class="container fix">
                 
                 <table class="table table-hover">
                   <h2 >fiSong Best Matching</h2>

@@ -13,18 +13,25 @@ $error_message='';
 if($_POST['addsong']){
   if($_POST['title'] && $_POST['lyric']&& isset($_FILES['song']))
   {
-    $connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+
+    // $connection=mysql_connect("db4free.net","weisong","victor1234") or die("host connection error");
+    $connection=mysql_connect("localhost","root","") or die("host connection error");
     mysql_select_db("fisonguser",$connection) or die("database error");
     $title=mysql_real_escape_string($_POST['title']);
-    
+
     $lyric=mysql_real_escape_string($_POST['lyric']);
-    //$song=mysql_real_escape_string($_POST['song']);
+
     $user=mysql_fetch_array(mysql_query("SELECT * FROM `songs` WHERE `title`='$title'"));
 
 
     $file_name = $_FILES['song']['name'];
+
       $file_size = $_FILES['song']['size'];
       $file_tmp = $_FILES['song']['tmp_name'];
+
+      // echo $title;
+      // echo $lyric;
+      // echo $file_name;
       $file_type = $_FILES['song']['type'];
     if($user!=null)
     {
@@ -32,7 +39,7 @@ if($_POST['addsong']){
     }
     else  
     {
-      mysql_query("INSERT INTO `songs` (`id`, `title`, `lyric`, `song`, `Male`,`Female`,`0-20`,`21-40`,`41-60`,`above 61`,`USA`,`China`,`Japan`,`Korea`,`Student`,`Teacher`,`Software Engineer`,`Accountant`,`Sales`) VALUES (NULL, '$title', '$lyric', '$file_name', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0')");
+      mysql_query("INSERT INTO `songs` (`id`, `title`, `lyric`, `song`, `Male`,`Female`,`0_20`,`21_40`,`41_60`,`above_61`,`USA`,`China`,`Japan`,`Korea`,`Student`,`Teacher`,`Software_Engineer`,`Accountant`,`Sales`) VALUES (NULL, '$title', '$lyric', '$file_name', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0')");
       move_uploaded_file($file_tmp,"song/".$file_name);
       header('Location: admin.php');
     }    
@@ -77,7 +84,7 @@ if($_POST['addsong']){
                 <h1  id="regT"> Adding a song</h1>
             </div>            
 
-      <div class="container">
+      <div class="container fix">
         <?php
         if($error_message!=''){
           echo"<p class='error' align='center' style='color: red;'>{$error_message}</p>";}

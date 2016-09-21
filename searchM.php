@@ -57,7 +57,7 @@ if($_POST['bestM'])
                 <h1  id="fisongT"> fiSong Best Matching</h1>
             </div>
 
-            <div class="container">
+            <div class="container fix">
               <h2 >fiSong Best Matching</h2>
               <form role="form" method="post">
                 <div class="form-group">
