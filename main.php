@@ -12,8 +12,10 @@ if($_SESSION['name']==null)
       <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <link rel='icon' href='http://localhost/example/image/m0.jpg'>
-
-
+       <!--  <embed src="song/bg.mp3" autostart="true" loop="true" hidden="true"> -->
+       <audio src="song/bg.mp3" autoplay>
+        <embed src="song/bg.mp3" width="180" height="90" hidden="true" />
+      </audio>
 
        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 
